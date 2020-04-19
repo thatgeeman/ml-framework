@@ -3,6 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# input for model
+input/
+models/
+
+# data files
+*.csv
+*.txt
+*.h5
+*.pkl 
+*.pth
+
 # C extensions
 *.so
 

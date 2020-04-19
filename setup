@@ -1,0 +1,11 @@
+#! /bin/bash
+# heavily inspired from athakur
+
+# touch .gitignore # copy from github
+mkdir src input models 
+cd src/
+touch init.py train.py metrics.py create_folds.py predict.py data_set.py loss.py utils.py feature_gen.py dispatcher.py
+cd -
+
+
+
