@@ -1,5 +1,5 @@
 # ml-framework
-A machine learning framework to init a project (inspired from athakur). Clone this repo with an intended `project name`. and run in terminal `./setup` to initialise directories. Use option `-d` to remove git `HEAD` and reinitialise a new repository.
+A machine learning framework to init a project (inspired from athakur). Clone this repo with an intended `project name` and run in terminal `./setup` to initialise directories. Use option `-d` to remove git `HEAD` and reinitialise a new repository.
 
 # project name
 
