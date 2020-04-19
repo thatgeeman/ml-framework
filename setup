@@ -1,11 +1,27 @@
 #! /bin/bash
-# heavily inspired from athakur
 
-# touch .gitignore # copy from github
+# heavily inspired from athakur
+# touch .gitignore # copied from github
+# touch LICENSE
+# -d to init a new repo 
+
+if [ -d ./src ]; then rm -rf src; fi
+if [ -d ./input ]; then rm -rf input; fi
+if [ -d ./models ]; then rm -rf models; fi
+
+export d=$1
+
 mkdir src input models 
 cd src/
 touch init.py train.py metrics.py create_folds.py predict.py data_set.py loss.py utils.py feature_gen.py dispatcher.py
 cd -
 
-
+echo ":done, add input/ models/ to .gitignore if needed"
+if [ "${d:1:10}" == "d" ]
+  then 
+  	echo ":got option -d"
+    rm -rf .git
+    git init .
+    echo ":reinitialised new git, no HEAD"
+  fi
 
