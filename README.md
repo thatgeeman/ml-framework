@@ -1,2 +1,2 @@
 # ml-framework
-A ML framework to init a data science project
+A machine learning framework to init a data science project
