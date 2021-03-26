@@ -23,7 +23,6 @@ if [ "${d:1:10}" == "d" ]
   then 
   	echo ":got option -d"
     rm -rf .git
-    rm README.md
     echo "## ${repo} " > README.md
     git init .
     echo ":reinitialised new git, no HEAD"
