@@ -10,6 +10,8 @@ if [ -d ./input ]; then rm -rf input; fi
 if [ -d ./models ]; then rm -rf models; fi
 
 export d=$1
+export uid=$2
+export repo=$3
 
 mkdir src input models 
 cd src/
@@ -21,7 +23,13 @@ if [ "${d:1:10}" == "d" ]
   then 
   	echo ":got option -d"
     rm -rf .git
+    rm README.md
     git init .
     echo ":reinitialised new git, no HEAD"
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin git@github.com:${uid}/${repo}.git
+    git push -u origin main
   fi
 
