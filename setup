@@ -6,19 +6,22 @@
 # -d to init a new repo 
 
 if [ -d ./src ]; then rm -rf src; fi
-if [ -d ./input ]; then rm -rf input; fi
+if [ -d ./data ]; then rm -rf data; fi
 if [ -d ./models ]; then rm -rf models; fi
+if [ -d ./config ]; then rm -rf config; fi
 
 export d=$1
 export uid=$2
 export repo=$3
 
-mkdir src input models 
+mkdir src data models config
 cd src/
-touch init.py train.py metrics.py create_folds.py predict.py data_set.py loss.py utils.py feature_gen.py dispatcher.py
+touch utils.py train.py metrics.py loss.py 
+touch get_preds.py get_data.py
 cd -
+touch config/env.yml
 
-echo ":done, add input/ models/ to .gitignore if needed"
+echo ":done, add data/ models/ to .gitignore if needed"
 if [ "${d:1:10}" == "d" ]
   then 
   	echo ":got option -d"
