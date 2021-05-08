@@ -12,24 +12,22 @@ A machine learning framework to init a project (inspired from athakur). Clone th
 ## directory tree after running `./setup` 
 ```
 .
-├── input
+├── config
+│   └── env.yml
+├── data
 ├── LICENSE
 ├── models
 ├── README.md
 ├── setup
 └── src
-    ├── create_folds.py
-    ├── data_set.py
-    ├── dispatcher.py
-    ├── feature_gen.py
-    ├── init.py
+    ├── get_data.py
+    ├── get_preds.py
     ├── loss.py
     ├── metrics.py
-    ├── predict.py
     ├── train.py
     └── utils.py
 
-3 directories, 13 files
+4 directories, 10 files
 ```
 (generated using [tree](https://en.wikipedia.org/wiki/Tree_(command)))
 
@@ -44,10 +42,12 @@ Descriptive dataset information
 # method and models 
 Models used and prediction 
 
-# metrics
+## metrics
 Metrics used to evaluate the test set
 
-# inference 
+## inference 
 Inference of the outcome
 
-# references
+## references
+
+# license
